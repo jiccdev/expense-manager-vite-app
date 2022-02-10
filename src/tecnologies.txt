@@ -1,0 +1,18 @@
+react
+tailwind
+formik
+rest api: es una forma ordenada de como poner a disposicion los recursos api
+crear rest api con json server, como fornted lo utilizo sin necesidad de que el backedn tnga listo los endpoints
+
+GET: es para obtner datos 
+POST: es para enviar datos al servidor o creacion
+PUT/PATCH: para actualizar
+DELETE: eliminar regsitro
+
+En una REST API
+Debo definir endpoints(urls), para hacer operaciones CRUD
+EJ: listar los clientes, se usa GET /customers
+Ej: obtener un solo cliente, GET /customers/10
+EJ: crear un NUEVO cliente, POST /customers/10
+EJ: editar cliente, PUT /customers/10
+EJ: eliminar cliente, DELETE /customers/10
