@@ -29,7 +29,7 @@ const CustomerForm = ({ customer, spinner }) => {
       let res;
       if (customer.id) {
         // Editing a register
-        const url = `http://localhost:4000/customers/${customer.id}`;
+        const url = `${import.meta.env.VITE_API_URL}/${customer.id}`;
         res = await fetch(url, {
           method: 'PUT',
           body: JSON.stringify(values),
@@ -39,7 +39,7 @@ const CustomerForm = ({ customer, spinner }) => {
         });
       } else {
         // New Register
-        const url = 'http://localhost:4000/customers';
+        const url = import.meta.env.VITE_API_URL;
         res = await fetch(url, {
           method: 'POST',
           body: JSON.stringify(values),

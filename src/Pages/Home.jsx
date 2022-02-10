@@ -10,7 +10,7 @@ const Home = () => {
   useEffect(() => {
     const getApiCustomers = async () => {
       try {
-        const url = 'http://localhost:4000/customers/';
+        const url = import.meta.env.VITE_API_URL;
         const res = await fetch(url);
         const result = await res.json();
         setCustomers(result);
@@ -25,7 +25,7 @@ const Home = () => {
     const confirmAlert = window.confirm('You want to delete this customer');
     if (confirmAlert) {
       try {
-        const url = `http://localhost:4000/customers/${id}`;
+        const url = `${import.meta.env.VITE_API_URL}/${id}`;
         const res = await fetch(url, {
           method: 'DELETE',
         });
